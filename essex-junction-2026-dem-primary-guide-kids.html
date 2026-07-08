@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kids’ Guide: Essex Junction Democratic Primary — August 2026</title>
+<style>
+:root{
+  --bg:#faf9f5; --card:#ffffff; --line:#e6e3da; --line-strong:#cfccc1;
+  --t1:#1f1e1b; --t2:#5f5e58; --t3:#8a8980;
+  --accent-bg:#e6f1fb; --accent-t:#0c447c;
+  --ok-bg:#e1f5ee; --ok-t:#0f6e56;
+  --warn-bg:#fbeee0; --warn-t:#9a5b0f;
+  --neutral-bg:#f1efe8;
+  --job-bg:#eef0fb; --job-t:#3c3f8a;
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --bg:#1c1b18; --card:#26241f; --line:#393730; --line-strong:#4a473e;
+    --t1:#f3f1ea; --t2:#b9b6ab; --t3:#8a8980;
+    --accent-bg:#0c447c; --accent-t:#b5d4f4;
+    --ok-bg:#085041; --ok-t:#9fe1cb;
+    --warn-bg:#4a3417; --warn-t:#f0c890;
+    --neutral-bg:#33312a;
+    --job-bg:#2b2a4a; --job-t:#c2c5f5;
+  }
+}
+*{box-sizing:border-box;}
+body{margin:0;background:var(--bg);color:var(--t1);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  font-size:16.5px;line-height:1.65;padding:24px 16px 64px;}
+.wrap{max-width:760px;margin:0 auto;}
+.hero{background:var(--neutral-bg);border-radius:16px;padding:22px 24px;margin-bottom:20px;}
+.hero h1{font-size:26px;font-weight:700;margin:0 0 8px;}
+.hero .sub{font-size:16px;color:var(--t2);margin:0;}
+.hero .sub + .sub{margin-top:6px;}
+.hero .sub a{color:var(--accent-t);text-decoration:none;font-weight:600;}
+.hero .sub a:hover{text-decoration:underline;}
+.hero .fine{font-size:13px;color:var(--t3);margin-top:10px;}
+.explainWrap{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px 20px;margin-bottom:16px;}
+.explainWrap h2{font-size:18px;margin:0 0 10px;}
+.explainWrap p{font-size:15px;color:var(--t1);margin:0 0 10px;line-height:1.65;}
+.explainWrap p:last-child{margin-bottom:0;}
+.race{border:1px solid var(--line);border-radius:16px;margin-bottom:12px;overflow:hidden;background:var(--card);}
+.rhead{padding:14px 16px;display:flex;align-items:center;justify-content:space-between;gap:12px;}
+.rmeta{font-size:11.5px;color:var(--t3);margin-bottom:2px;}
+.rtitle{font-size:17px;font-weight:700;}
+.rbody{padding:0 16px 8px;}
+.tag{font-size:11.5px;padding:3px 10px;border-radius:20px;font-weight:600;white-space:nowrap;display:inline-block;}
+.t-contested{background:var(--accent-bg);color:var(--accent-t);}
+.t-unopposed{background:var(--neutral-bg);color:var(--t2);}
+.t-inc{background:var(--ok-bg);color:var(--ok-t);margin-left:8px;}
+.note{font-size:13.5px;color:var(--t3);padding:12px 0 0;border-top:1px solid var(--line);}
+.jobbox{margin-top:12px;padding:12px 14px;border-radius:10px;background:var(--job-bg);color:var(--t1);font-size:14.5px;line-height:1.6;}
+.jobbox b{color:var(--job-t);}
+.forumbox{margin-top:12px;padding:10px 12px;border-radius:10px;background:var(--warn-bg);font-size:13.5px;color:var(--t1);line-height:1.6;}
+.forumbox b{color:var(--warn-t);}
+.forumbox.past{background:transparent;border:1px dashed var(--line-strong);color:var(--t2);}
+.forumbox.past b{color:var(--t3);}
+.cand{border-top:1px solid var(--line);padding:14px 0;}
+.cname{font-size:16px;font-weight:700;}
+.cbio{font-size:14.5px;color:var(--t2);margin:6px 0 8px;}
+.cweb{font-size:13.5px;margin:0 0 8px;}
+.cweb a{color:var(--accent-t);text-decoration:none;}
+.cweb a:hover{text-decoration:underline;}
+.cite a{color:var(--accent-t);text-decoration:none;}
+.cite a:hover{text-decoration:underline;}
+.prow{display:flex;gap:8px;margin-top:6px;font-size:14.5px;}
+.prow .k{color:var(--t2);min-width:120px;flex-shrink:0;font-weight:600;}
+.prow .v{color:var(--t1);}
+.endorse{margin-top:8px;font-size:14px;line-height:1.55;padding:8px 10px;background:var(--neutral-bg);border-radius:8px;}
+.endorse .k{color:var(--t2);font-weight:600;display:block;margin-bottom:3px;font-size:12.5px;text-transform:uppercase;letter-spacing:.02em;}
+.endorse .ns{color:var(--t3);font-style:italic;}
+.cmptitle{font-size:14px;font-weight:700;color:var(--t2);margin:16px 0 8px;border-top:1px solid var(--line);padding-top:14px;}
+.cmpscroll{overflow-x:auto;-webkit-overflow-scrolling:touch;margin-bottom:6px;}
+table.cmp{border-collapse:collapse;font-size:13px;min-width:640px;width:100%;}
+table.cmp th,table.cmp td{border:1px solid var(--line);padding:8px 9px;vertical-align:top;text-align:left;line-height:1.55;}
+table.cmp th{background:var(--neutral-bg);font-weight:700;color:var(--t1);font-size:12.5px;}
+table.cmp th.cand-h{white-space:nowrap;}
+table.cmp td.issue{font-weight:700;color:var(--t2);background:var(--neutral-bg);white-space:normal;min-width:150px;}
+table.cmp td .ns{color:var(--t3);font-style:italic;}
+.why{font-weight:400;color:var(--t3);font-size:12px;display:block;margin-top:5px;line-height:1.45;}
+.srcnote{font-size:12px;color:var(--t3);margin:2px 0 4px;}
+.foot{font-size:13px;color:var(--t3);margin-top:28px;line-height:1.75;border-top:1px solid var(--line);padding-top:16px;}
+.foot a{color:var(--accent-t);}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="hero">
+    <h1>A Kid’s Guide to the Essex Junction Democratic Primary</h1>
+    <p class="sub">Tuesday, August 11, 2026 — an election for a lot of important local, state, and national jobs.</p>
+    <p class="sub"><a href="https://www.essexjunction.org/departments/clerk/voter-information" target="_blank" rel="noopener">Voting information for Essex Junction ↗</a> — grown-ups can find sample ballots and how to vote here.</p>
+    <p class="fine">This is a kid-friendly version of a longer voter guide, written for around a 5th-grade reading level. It covers the same candidates and facts, just explained more simply. Last updated July 7, 2026.</p>
+  </div>
+
+  <div class="explainWrap">
+    <h2>How does this work?</h2>
+    <p>An election is how we choose the people who make decisions for our town, state, and country. People vote, and whoever gets the most votes wins.</p>
+    <p>This guide is about a <b>primary</b> election. Political parties — like the Democratic Party — each hold their own election first, so voters in that party can choose who represents them in the bigger election that happens later, in November. This guide only covers the Democratic Party’s primary.</p>
+    <p>Most jobs have one opening, so the primary picks one winner. But a few jobs have more than one opening at the same time — like the Chittenden-Central State Senate race, which has 3 seats. For those, voters pick up to that many candidates, and the top vote-getters — one for each open seat — all move on to November.</p>
+    <p>Sometimes you’ll see a race where it says nobody else is running. That just means only one Democrat signed up for that job, so that candidate moves on to November without a primary contest.</p>
+    <p>You’ll notice there are a lot of different jobs on this list — governor, senator, sheriff, and more — instead of just one person in charge of everything. That’s on purpose: splitting up the work means no single person has too much power, and each job can focus on doing one part well.</p>
+    <p>You can’t vote yet, but you can still be part of this. Ask the grown-ups in your life who they’re thinking about voting for, and why. Read about a few candidates together. And when you turn 18, it’ll be your turn.</p>
+  </div>
+
+  <div class="explainWrap">
+    <h2>Why do candidates disagree?</h2>
+    <p>Grown-ups don’t always agree on the best way to fix a problem — and that’s normal! In the “Where they stand” sections below, you’ll often see that candidates care about the exact same problem (like the cost of housing) but have different ideas about how to solve it.</p>
+    <p>As you read, try asking yourself: What problem are they both trying to fix? How are their ideas different? Neither one has to be “wrong” for the other to be “right” — that’s just how solving hard problems works.</p>
+    <p>You’ll also see some candidates “endorsed” by a group or a well-known person. An endorsement just means that group or person is publicly saying “we like this candidate.” It’s their opinion, not a fact about who’s best — you (and the grown-ups you talk to) get to decide what matters most.</p>
+  </div>
+
+  <div id="list"></div>
+
+  <div class="foot">
+    Grown-up notes: this guide lists every candidate on the official Vermont Secretary of State primary ballot (candidates had to sign up by May 28, 2026), double-checked against the Chittenden-22 sample ballot and news reporting. Every claim or endorsement shown here comes from something a candidate or a news outlet actually said publicly. Two candidate forums already happened (Chittenden-22 House on June 24, and Chittenden-Central Senate on July 6); those are marked as past events. All other Town Meeting TV forums happen at 294 North Winooski Ave., Burlington, and air live on Comcast channel 1087, Burlington Telecom channels 17 &amp; 217, and YouTube (search “Town Meeting TV”); you can call in a question at 802-862-3966. Forum times can change — double check at <a href="https://www.cctv.org/primary">cctv.org/primary</a>. This is a simplified companion to a longer, more detailed guide — see the <a href="essex-junction-2026-dem-primary-guide_3.html">full voter guide</a> for more depth and sourcing. Official candidate list: Vermont Secretary of State, <a href="https://sos.vermont.gov/elections/election-info-resources/candidates">live candidate list</a>. Vermont has an “open primary,” meaning any registered voter can vote in one party’s primary without registering with that party ahead of time.
+  </div>
+</div>
+
+<script>
+const FORUM_WATCH = 'You (or a grown-up) can watch live at the Town Meeting TV studio, 294 North Winooski Ave., Burlington, VT — or on Comcast channel 1087, Burlington Telecom channels 17 &amp; 217, or on YouTube (search “Town Meeting TV”). You can even call in a question at 802-862-3966.';
+const FORUM_PAST = 'This event already happened. You might find a recording on Town Meeting TV’s YouTube channel — search “Town Meeting TV” or check cctv.org/primary.';
+
+const RACES = [
+  {id:'ush',cat:'federal',office:'U.S. House (At-Large)',seats:'1 seat',contested:false,
+   whatIsThis:'The U.S. House of Representatives is part of Congress, the part of the government that writes and votes on laws for the whole country in Washington, D.C. Vermont only gets one U.S. House member, and they represent our entire state.',
+   cands:[{name:'Becca Balint',inc:true,web:'https://www.beccabalint.com',bio:'Becca Balint already holds this job. She used to be a middle-school teacher in Brattleboro, and before Congress she was a leader in the Vermont Senate. She was the first woman and the first openly gay person Vermont ever sent to Congress.',pos:[['What’s happening','Nobody else signed up to run against her in the Democratic primary, so she moves on to the November election automatically. Two Republicans are competing to see who challenges her then.']]}]},
+
+  {id:'gov',cat:'statewide',office:'Governor',seats:'1 seat',contested:true,
+   whatIsThis:'The Governor leads Vermont’s state government. The governor signs new laws (or says no to them), runs state agencies day-to-day, suggests how the state should spend its money, and can call in the National Guard to help during emergencies like floods.',
+   forum:{status:'upcoming',when:'Tuesday, July 14, 2026, 5:25 p.m.',what:FORUM_WATCH},
+   cands:[
+    {name:'Amanda Janoo',inc:false,web:'https://www.janooforvt.com',bio:'Amanda Janoo studies how economies work. She grew up in Strafford and now lives in Burlington. This is her first time running for a big statewide job — she used to help other countries figure out how to grow their economies fairly, and she started a Vermont group focused on people’s well-being, not just money.',pos:[['Affordability','Says prices have been going up for ten years and something needs to change. This is the main problem she wants to fix.'],['Federal government','Thinks the current governor hasn’t pushed back hard enough against unhelpful actions from the federal government.'],['Approach','Describes herself as someone with bold, new ideas.']],endorse:'A group that represents state workers (VSEA) says they support her <b class="cite">[<a href="https://www.vermontpublic.org/local-news/2026-07-02/phil-scotts-approval-numbers-slipping-new-poll-finds" target="_blank" rel="noopener">Vermont Public</a>]</b>. She has said she cares more about support from everyday Vermonters in every town than from “important” people, so she hasn’t collected a long list of famous endorsers on purpose <b class="cite">[<a href="https://www.colchestersun.com/news/government/amanda-janoo-seeks-governorship-to-create-wellbeing-economy/article_a3e867d9-cc55-526f-965f-3145e8a99b11.html" target="_blank" rel="noopener">Colchester Sun</a>]</b>.'},
+    {name:'Aly Richards',inc:false,web:'https://alyforvt.com',bio:'Aly Richards is 40 years old. She used to run Let’s Grow Kids, a group that helped create Vermont’s child-care law. She also worked for a past governor and has been involved with the UVM Medical Center. She grew up in Newbury and lives in Montpelier now.',pos:[['Affordability','Calls Vermont’s high cost of living a huge, urgent problem. Her top goal is helping build more homes people can actually afford.'],['Health care','Says fixing the health care system and making it cheaper is one of her top goals.'],['Education','Does not want to force small schools to combine with others. She wants decisions based on what actually works, not a one-size-fits-all rule.'],['Record','Points to helping pass Vermont’s 2023 child-care law as proof she gets things done.']],endorse:'Former Governor Howard Dean says he supports her <b class="cite">[<a href="https://www.vermontpublic.org/local-news/2026-04-06/leading-force-behind-child-care-law-enters-race-for-governor" target="_blank" rel="noopener">Vermont Public</a>]</b>.'}
+   ],
+   issues:{
+     cols:['Amanda Janoo','Aly Richards'],
+     rows:[
+       {issue:'School funding',
+        why:'Both agree school costs are a problem for Vermont families. They disagree about whether combining small schools is really the fix.',
+        cells:[
+         'Doesn’t think forcing schools to close or combine is fair. Says the real reason school costs are high is that health insurance is so expensive — not because there are too many small schools <b class="cite">[<a href="https://vtdigger.org/2026/03/10/first-democratic-challenger-to-phil-scott-enters-governors-race/" target="_blank" rel="noopener">VTDigger</a>; <a href="https://vnews.com/2026/03/12/janoo-launches-vermont-gubernatorial-bid/" target="_blank" rel="noopener">Valley News</a>]</b>',
+         'Also doesn’t want to force schools to combine. Wants to look closely at what’s actually working before making big changes <b class="cite">[<a href="https://vtdigger.org/2026/04/06/aly-richards-former-head-of-lets-grow-kids-launches-bid-for-vermont-governor/" target="_blank" rel="noopener">VTDigger</a>]</b>']},
+       {issue:'Health care costs',
+        why:'Both candidates agree health care costs too much. They disagree about how big a change is needed to fix it.',
+        cells:[
+         'Wants people who earn over $500,000 a year to pay a bit more, so Vermont can offer low-cost doctor visits to everyone — with a longer-term goal of a much bigger change to how health coverage works <b class="cite">[<a href="https://vnews.com/2026/03/12/janoo-launches-vermont-gubernatorial-bid/" target="_blank" rel="noopener">Valley News</a>; <a href="https://www.vermontpublic.org/local-news/2026-04-06/leading-force-behind-child-care-law-enters-race-for-governor" target="_blank" rel="noopener">Vermont Public</a>; <a href="https://www.wcax.com/2026/05/26/802-news-who-is-amanda-janoo/" target="_blank" rel="noopener">WCAX</a>]</b>',
+         'Says fixing the “broken” health care system and making it cheaper is a top goal, but hasn’t said new taxes would be her first choice for paying for it <b class="cite">[<a href="https://www.vermontpublic.org/local-news/2026-04-06/leading-force-behind-child-care-law-enters-race-for-governor" target="_blank" rel="noopener">Vermont Public</a>]</b>']},
+       {issue:'Housing',
+        why:'Both candidates want more homes built in Vermont, but they start from different priorities.',
+        cells:[
+         'Wants housing that stays affordable for a long time, plus support for people dealing with addiction or mental-health struggles who need a home <b class="cite">[<a href="https://www.reformer.com/local-news/windham-democratic-committee-hosts-forum-with-gubernatorial-candidates-aly-richards-and-amanda-janoo/article_d7b7dc88-e295-42f1-8b1b-fb6e89f95e9a.html" target="_blank" rel="noopener">Reformer</a>]</b>',
+         'Her top plan (called the “Vermont Economic Action Plan”) focuses on building more homes, which she says brings in workers and can even help lower property taxes over time <b class="cite">[<a href="https://www.samessenger.com/news/government/aly-richards-sets-sights-on-vt-governor-seat/article_10f70dfa-de1a-4ff9-ac79-1e748a19e0d0.html" target="_blank" rel="noopener">St. Albans Messenger</a>]</b>']}
+     ]
+   }},
+
+  {id:'lg',cat:'statewide',office:'Lieutenant Governor',seats:'1 seat',contested:true,
+   whatIsThis:'The Lieutenant Governor is Vermont’s backup governor — if the governor can’t do the job, the lieutenant governor steps in. This person also runs meetings of the State Senate and can vote to break a tie.',
+   forum:{status:'upcoming',when:'Wednesday, July 15, 2026, 5:25 p.m.',what:FORUM_WATCH},
+   cands:[
+    {name:'Molly Gray',inc:false,web:'https://www.mollyforvt.com',bio:'Molly Gray already served as lieutenant governor once before, from 2021 to 2023. She’s a lawyer who has worked for Congress and ran for the U.S. House in 2022. Most recently she led a nonprofit helping Afghan refugees.',pos:[['Affordability','Points out that even though not many Vermonters are out of work, Vermont is still one of the most expensive states to live in. She wants the state to invest more, not spend less.'],['Health care','Wants to invest in basic health care, mental health care, and care for older Vermonters. She often talks about a $10,000 ambulance bill she got after a skiing accident that left her paralyzed.'],['ICE / immigration','Says Vermont’s governor and lieutenant governor should not cooperate with federal immigration agents (ICE).']],endorse:'Former Governors Howard Dean and Madeleine Kunin say they support her <b class="cite">[<a href="https://vtdigger.org/2026/07/02/candidates-for-vermont-governor-and-lieutenant-governor-report-large-fundraising-hauls/" target="_blank" rel="noopener">VTDigger</a>]</b>.'},
+    {name:'Esther Charlestin',inc:false,web:'https://charlestinforvermont.com',bio:'Esther Charlestin is a teacher and small-business owner who used to sit on the Middlebury Selectboard and led the Vermont Commission on Women. She ran for governor in 2024. She was born in Haiti and has two master’s degrees.',pos:[['Cost of living','Focuses on making sure kids get a good education, lowering costs, and giving families more freedom to make their own choices.'],['Housing','Wants the state to invest more in housing and infrastructure and to remove rules that make it harder to build.'],['ICE / immigration','Wants limits on ICE activity in Vermont, saying some students are scared because of immigration enforcement.']],endorse:'<span class="ns">We couldn’t find any well-known groups or leaders publicly supporting her 2026 campaign yet.</span> (Her website lists praise from her 2024 run for governor, not this race.)'},
+    {name:'Ryan McLaren',inc:false,web:'https://www.mclarenforvermont.com',bio:'Ryan McLaren has spent about ten years as a top staff member for U.S. Senator Peter Welch, worked for a past governor, and served on the Essex school board. He’s a member of the Democratic National Committee.',pos:[['Affordability','Calls Vermont’s cost of living a “crisis” and says it costs about $40,000 a year to raise a child here. Wants leaders who will act boldly and quickly.'],['Immigration','Says targeting immigrants goes against Vermont’s values, and that Vermonters welcome newcomers.'],['Trust in government','Says Vermonters are losing faith in state government, and he wants to earn it back.']],endorse:'Former Governor Peter Shumlin has given money to his campaign <b class="cite">[<a href="https://vtdigger.org/2026/07/02/candidates-for-vermont-governor-and-lieutenant-governor-report-large-fundraising-hauls/" target="_blank" rel="noopener">VTDigger</a>]</b>.'}
+   ],
+   issues:{
+     cols:['Molly Gray','Esther Charlestin','Ryan McLaren'],
+     rows:[
+       {issue:'School funding',
+        why:'All three agree schools cost too much for what families can afford, but they don’t fully agree on the fix.',
+        cells:[
+         'Doesn’t think combining schools is the real answer — says it doesn’t fix the bigger reason costs are high, which is health care <b class="cite">[<a href="https://www.reformer.com/opinion/columnists/commentary-molly-gray-it-s-time-to-invest-in-vermont/article_55abf29c-bd20-4d37-a43c-3212291c2533.html" target="_blank" rel="noopener">Reformer op-ed</a>]</b>',
+         'Talks about “access to good education” as a big part of why life costs so much in Vermont <b class="cite">[<a href="https://vtdigger.org/2026/01/28/esther-charlestin-gov-scott-challenger-in-2024-launches-lieutenant-governor-bid/" target="_blank" rel="noopener">VTDigger</a>]</b>',
+         'Focuses on “good outcomes for kids.” His housing plan would turn some planned school-tax savings into tax credits for building new homes instead <b class="cite">[<a href="https://www.reformer.com/opinion/columnists/commentary-ryan-mclaren-we-can-keep-buying-one-more-year-or-we-can-build-our/article_ebb88cdd-56a5-4eab-a8a7-aa514da2f678.html" target="_blank" rel="noopener">Reformer</a>]</b>']},
+       {issue:'Health care costs',
+        why:'They agree health care costs are a real problem for Vermont families, but propose different next steps.',
+        cells:[
+         'Wants to grow Dr. Dynasaur (Vermont’s health coverage for kids and families) into basic care for everyone, and train more doctors and nurses.',
+         'Wants stronger rules, more openness, and more accountability in how health care is run <b class="cite">[<a href="https://www.wamc.org/news/2026-04-22/a-look-at-vermont-democratic-lieutenant-governor-primary-candidates" target="_blank" rel="noopener">WAMC</a>]</b>',
+         'Believes in a national system where everyone has the same health coverage, and says health care costs are one of Vermont’s biggest problems <b class="cite">[<a href="https://www.wamc.org/news/2026-04-22/a-look-at-vermont-democratic-lieutenant-governor-primary-candidates" target="_blank" rel="noopener">WAMC</a>]</b>']},
+       {issue:'Housing',
+        why:'All three want more homes built in Vermont, but they emphasize different pieces of the problem.',
+        cells:[
+         'Wants 30,000 new homes built by 2030, and supports programs that help pay for new housing and make it easier to build near existing towns <b class="cite">[<a href="https://www.reformer.com/opinion/columnists/commentary-molly-gray-it-s-time-to-invest-in-vermont/article_55abf29c-bd20-4d37-a43c-3212291c2533.html" target="_blank" rel="noopener">Reformer op-ed</a>]</b>',
+         'Wants the state to invest in housing and infrastructure and remove rules that slow down building <b class="cite">[<a href="https://www.wamc.org/news/2026-04-22/a-look-at-vermont-democratic-lieutenant-governor-primary-candidates" target="_blank" rel="noopener">WAMC</a>]</b>',
+         'His plan is built around three ideas: housing, health care, and hope. He thinks a state land-use law (Act 250) makes it too hard to build, and wants to give local planning groups more power <b class="cite">[<a href="https://www.vtcng.com/stowe_reporter/news/local_news/lieutenant-governor-candidate-talks-health-housing/article_81ef0e28-f321-4ef1-b2ff-a93f2ca2a8e8.html" target="_blank" rel="noopener">Stowe Reporter</a>]</b>']}
+     ]
+   }},
+
+  {id:'treas',cat:'statewide',office:'Treasurer',seats:'1 seat',contested:false,
+   whatIsThis:'The Treasurer takes care of Vermont’s money — paying the state’s bills, investing extra money wisely, managing money the state owes, and overseeing retirement savings for teachers and state workers.',
+   cands:[{name:'Mike Pieciak',inc:true,web:'https://www.pieciakforvermont.com',bio:'Mike Pieciak already has this job. Before that, he was the state’s top financial regulator and worked as a lawyer. He’s from Winooski.',pos:[['What’s happening','Nobody else signed up to run against him in the Democratic primary. Some people thought he might run for governor instead, but he chose to run for treasurer again.']]}]},
+
+  {id:'sos',cat:'statewide',office:'Secretary of State',seats:'1 seat',contested:false,
+   whatIsThis:'The Secretary of State runs Vermont’s elections, keeps the state’s official records, and manages business registrations. This office makes sure elections are fair and well organized.',
+   cands:[{name:'Sarah Copeland Hanzas',inc:true,web:'https://www.sarahforvermont.com',bio:'Sarah Copeland Hanzas already has this job. Before that, she was a state representative from Bradford and led the Vermont House as majority leader.',pos:[['What’s happening','Nobody else signed up to run against her in the Democratic primary.']]}]},
+
+  {id:'aud',cat:'statewide',office:'Auditor of Accounts',seats:'1 seat',contested:true,
+   whatIsThis:'The Auditor checks how the state spends taxpayer money. Think of this person as a financial watchdog — they look for mistakes, waste, or misuse of public money and tell everyone what they find.',
+   forum:{status:'upcoming',when:'Thursday, July 9, 2026, 5:25 p.m.',what:FORUM_WATCH},
+   cands:[
+    {name:'Tim Ashe',inc:false,web:'https://www.timashe.com',bio:'Tim Ashe currently works as the deputy auditor. Before that, he led the Vermont Senate and represented Chittenden County there for over a decade, and served on the Burlington City Council.',pos:[['Focus','Wants the office to pay closer attention to health care, affordable housing, and weather emergencies.'],['Housing','Wants to study how short-term rentals (like Airbnbs) and vacation homes affect how many houses are actually available for Vermonters to live in.'],['Health care','Would look for overpayments in state health spending, including prescription drugs and care outside Vermont.'],['Fraud / waste','Says catching fraud and waste has to stay a top job for this office.']],endorse:'<span class="ns">We couldn’t find any well-known groups or leaders publicly supporting him.</span>'},
+    {name:'Dan Towle',inc:false,bio:'Dan Towle is from Huntington and joined the race in May 2026. He’s running as a fiscal watchdog for the state.',pos:[['Role','Wants to be the state’s top fiscal watchdog. He hasn’t shared many detailed plans publicly yet.']],endorse:'<span class="ns">We couldn’t find any well-known groups or leaders publicly supporting him.</span>'},
+    {name:'Nicholas Graeter',inc:false,web:'https://www.nickforvt.com',bio:'Nicholas Graeter is from Williston and is running for auditor.',pos:[['Note','He’s on the official primary ballot. We haven’t found many public details about his specific plans yet.']],endorse:'<span class="ns">We couldn’t find any well-known groups or leaders publicly supporting him.</span>'}
+   ]},
+
+  {id:'ag',cat:'statewide',office:'Attorney General',seats:'1 seat',contested:false,
+   whatIsThis:'The Attorney General is Vermont’s top lawyer for the state government. This person represents Vermont in court, enforces laws that protect consumers and civil rights, and can investigate wrongdoing.',
+   cands:[{name:'Charity Clark',inc:true,web:'https://www.charityclark.com',bio:'Charity Clark already has this job. She’s from Williston and used to be chief of staff in this same office before she was elected.',pos:[['What’s happening','Nobody else signed up to run against her in the Democratic primary.']]}]},
+
+  {id:'sen',cat:'legislative',office:'State Senate — Chittenden-Central',seats:'3 seats',contested:true,
+   whatIsThis:'Vermont’s legislature (the group that writes state laws) has two parts: the Senate and the House. Senators represent bigger regions of the state. This district sends three senators to Montpelier to help write laws, decide the state budget, and set taxes.',
+   note:'Essex Junction is part of a district that also includes parts of Burlington, Winooski, Colchester, and Essex. This district picks three senators. The senator who has led the Senate for years, Phil Baruth, decided not to run again this time.',
+   forum:{status:'past',when:'Monday, July 6, 2026, 5:25 p.m.',what:FORUM_PAST},
+   cands:[
+    {name:'Martine Gulick',inc:true,web:'https://martinelarocquegulick.com',bio:'Martine Gulick already has this job. She’s a high school French and English teacher and used to run a library. She’s also been on the Burlington School Board since 2018. In the Senate, she works on the Finance Committee and helps lead the Health & Welfare Committee.',pos:[['What she’s worked on','Helped lead a group redesigning how Vermont pays for schools, and helped write a bill to catch reading struggles early <b class="cite">[<a href="https://martinelarocquegulick.com" target="_blank" rel="noopener">her campaign site</a>; <a href="https://vtdigger.org/2025/06/17/sen-martine-larocque-gulick-i-am-voting-no-on-h-454/" target="_blank" rel="noopener">VTDigger</a>]</b>.']],endorse:'Several state lawmakers and senators say they support her, according to her own campaign website <b class="cite">[<a href="https://martinelarocquegulick.com" target="_blank" rel="noopener">her campaign site</a>]</b>.'},
+    {name:'Tanya Vyhovsky',inc:true,web:'https://tanyavforvt.com',bio:'Tanya Vyhovsky already has this job. She’s a licensed social worker who also teaches at UVM. She’s one of only two Vermont senators who rent their home instead of owning it. Before the Senate, she served in the Vermont House.',pos:[['Where she stands','Runs as both a Democrat and a Progressive. She’s known as one of the more boldly progressive senators on housing, workers’ rights, and social programs.'],['Taxes','Wants a “fairer” tax system where wealthier Vermonters — who she says got big tax cuts recently — pay a bit more <b class="cite">[<a href="https://www.colchestersun.com/news/government/sen-tanya-vyhovsky-hopes-to-drive-change-for-constituents/article_96d13329-6764-4c48-b1ea-752cd6f26484.html" target="_blank" rel="noopener">Colchester Sun</a>]</b>.']],endorse:'In her last election (2024), she was supported by U.S. Senator Bernie Sanders and several workers’ unions and advocacy groups, according to her own campaign website <b class="cite">[<a href="https://tanyavforvt.com" target="_blank" rel="noopener">her campaign site</a>]</b>. We couldn’t confirm exactly which groups are supporting her in 2026.'},
+    {name:'Nikhil Goyal',inc:false,web:'https://www.nikhilgoyal.com',bio:'Nikhil Goyal teaches sociology at UVM and has written three books. Before moving to Vermont, he worked as a policy advisor for U.S. Senator Bernie Sanders in Washington, D.C.',pos:[['Affordability','Calls his plan the boldest in the race. His campaign slogan is “No Vermonter Priced Out.”'],['Immigration','Wants to get rid of ICE (the federal immigration enforcement agency) and says he’d personally go with immigrants to their court appointments.']],endorse:'Ben & Jerry’s co-founder Jerry Greenfield, environmentalist Bill McKibben, and two former state officials say they support him, according to his own campaign materials <b class="cite">[<a href="https://www.nikhilgoyal.com" target="_blank" rel="noopener">his campaign materials</a>]</b>.'},
+    {name:'Elaine Haney',inc:false,web:'https://www.elainehaneyvt.com',bio:'Elaine Haney is an Essex Junction city councilor. She used to serve on the Essex Selectboard and was a big part of the process where Essex Junction became its own separate city from the town of Essex.',pos:[['Affordability','Names the cost of living, health care, and housing as the biggest challenges.'],['Approach','Describes herself as a practical problem-solver who can work across political disagreements.']],endorse:'House Majority Leader Lori Houghton says she supports her, according to her own campaign website <b class="cite">[<a href="https://www.elainehaneyvt.com" target="_blank" rel="noopener">her campaign site</a>]</b>.'}
+   ],
+   issues:{
+     cols:['Martine Gulick (has this job now)','Tanya Vyhovsky (has this job now)','Nikhil Goyal','Elaine Haney'],
+     rows:[
+       {issue:'School funding',
+        why:'All four agree schools cost a lot, but they don’t agree on exactly how to fix it.',
+        cells:[
+         'Helped design Vermont’s new plan for schools to voluntarily join together, and says the taxes that pay for schools can’t keep rising the way they have <b class="cite">[<a href="https://martinelarocquegulick.com" target="_blank" rel="noopener">her campaign site</a>; <a href="https://vtdigger.org/2025/06/17/sen-martine-larocque-gulick-i-am-voting-no-on-h-454/" target="_blank" rel="noopener">VTDigger</a>]</b>',
+         'Doesn’t want to go back to giving schools a flat amount of money no matter what. Also questions whether tax dollars should go to private schools, and whether every district really needs its own HR office <b class="cite">[<a href="https://www.essexreporter.com/news/q-a-with-chittenden-central-senate-candidate-tanya-vyhovsky/article_ea8c5d6a-54bc-11ef-9501-6be71aa938a2.html" target="_blank" rel="noopener">Essex Reporter</a>]</b>',
+         'Supports schools joining together only if they choose to (not being forced), as long as public money stays in public schools and helps lower property taxes <b class="cite">[<a href="https://www.colchestersun.com/news/elections/nikhil-goyal-chittenden-central-district-2026-candidate/article_11f6705f-a9ca-48b5-9158-1170d08dcc7b.html" target="_blank" rel="noopener">Colchester Sun</a>; <a href="https://vtcynic.com/news/uvm-sociology-professor-enters-vermont-state-senate-race/" target="_blank" rel="noopener">Vermont Cynic</a>]</b>',
+         'Wants to make sure things like free lunch and extra classroom support stay in place while also improving reading and math scores <b class="cite">[<a href="https://www.colchestersun.com/news/government/elaine-haney-chittenden-central-senate-candidate-2026/article_ecaefd6f-eab8-59d7-8c8b-803431362900.html" target="_blank" rel="noopener">Colchester Sun</a>]</b>']},
+       {issue:'Health care costs',
+        why:'Everyone agrees health care costs too much. They differ on how far the state should go to fix it.',
+        cells:[
+         'As a Senate health-committee leader, wants to keep lowering costs while making care easier to get. Has worked on expanding coverage for midwifery care and ambulance services <b class="cite">[<a href="https://martinelarocquegulick.com" target="_blank" rel="noopener">her campaign site</a>]</b>',
+         'Long-term goal is a system where everyone has coverage with no extra fees. Helped pass rules on prescription-drug middlemen and expand Medicaid since taking office <b class="cite">[<a href="https://tanyavforvt.com" target="_blank" rel="noopener">her campaign site</a>; <a href="https://vtdigger.org/profile/tanya-vyhovsky/" target="_blank" rel="noopener">VTDigger</a>]</b>',
+         'Wants to cut insurance companies out of primary care and have hospitals charge lower, standard prices — a first step toward everyone having basic health coverage <b class="cite">[<a href="https://www.colchestersun.com/news/elections/nikhil-goyal-chittenden-central-district-2026-candidate/article_11f6705f-a9ca-48b5-9158-1170d08dcc7b.html" target="_blank" rel="noopener">Colchester Sun</a>]</b>; longer-term wants a system like Medicare for everyone <b class="cite">[<a href="https://www.nikhilgoyal.com" target="_blank" rel="noopener">his campaign materials</a>]</b>',
+         'Wants to encourage more small health-care businesses to compete (which can lower prices), invest in preventive care, and possibly add vision, hearing, and dental to basic coverage <b class="cite">[<a href="https://www.colchestersun.com/news/government/elaine-haney-chittenden-central-senate-candidate-2026/article_ecaefd6f-eab8-59d7-8c8b-803431362900.html" target="_blank" rel="noopener">Colchester Sun</a>]</b>']},
+       {issue:'Housing',
+        why:'All four want more homes people can afford, but they focus on different tools to get there.',
+        cells:[
+         'Focuses on manufactured homes, smaller modular homes, and changing zoning rules to allow small extra homes on existing properties <b class="cite">[<a href="https://martinelarocquegulick.com" target="_blank" rel="noopener">her campaign site</a>]</b>',
+         'Has spent the last year working on a new plan for publicly supported housing <b class="cite">[<a href="https://www.essexreporter.com/news/q-a-with-chittenden-central-senate-candidate-tanya-vyhovsky/article_ea8c5d6a-54bc-11ef-9501-6be71aa938a2.html" target="_blank" rel="noopener">Essex Reporter</a>]</b>, modeled on ideas used in Europe and by a local housing nonprofit <b class="cite">[<a href="https://tanyavforvt.com" target="_blank" rel="noopener">her campaign site</a>]</b>',
+         'Wants to fix up about 11,000 abandoned or foreclosed homes across Vermont and sell them at a lower cost to first-time buyers, older Vermonters looking to downsize, and young families <b class="cite">[<a href="https://www.colchestersun.com/news/elections/nikhil-goyal-chittenden-central-district-2026-candidate/article_11f6705f-a9ca-48b5-9158-1170d08dcc7b.html" target="_blank" rel="noopener">Colchester Sun</a>]</b>; also wants more walkable neighborhoods <b class="cite">[<a href="https://www.nikhilgoyal.com" target="_blank" rel="noopener">his campaign materials</a>]</b>',
+         'Wants to make it faster and easier to get building permits, and supports a program that helps landlords fix up their properties <b class="cite">[<a href="https://www.colchestersun.com/news/government/elaine-haney-chittenden-central-senate-candidate-2026/article_ecaefd6f-eab8-59d7-8c8b-803431362900.html" target="_blank" rel="noopener">Colchester Sun</a>]</b>']}
+     ]
+   }},
+
+  {id:'h22',cat:'legislative',office:'State House — Chittenden-22 (Essex Junction)',seats:'2 seats',contested:true,
+   whatIsThis:'The Vermont House of Representatives is the larger of the two parts of the state legislature. Each representative covers a smaller area than a senator does. This district covers part of Essex Junction and picks two representatives.',
+   note:'Essex Junction is split into two House districts — Chittenden-22 and Chittenden-23. Which one you vote in depends on your home address. This is the one with more than one candidate running.',
+   forum:{status:'past',when:'Wednesday, June 24, 2026, 5:25 p.m.',what:FORUM_PAST},
+   cands:[
+    {name:'Karen Dolan',inc:true,web:'https://www.dolanforvthouse.com',bio:'Karen Dolan already has this job. She’s a leader in the House (called the Majority Whip) and works on the Judiciary and Rules committees. Before being a lawmaker, she worked at a program in Essex that helps people who commit smaller crimes make things right instead of going straight to court. She’s worked in Vermont nonprofits for over 20 years.',pos:[['Her leadership role','As Majority Whip, part of her job is to share her party’s decisions with other lawmakers — sometimes that means explaining a group position even when it’s not necessarily her own personal opinion. For example, in 2026 she told colleagues that party leaders wanted a “no” vote on a tax proposal, without saying what she personally thought <b class="cite">[<a href="https://www.vermontpublic.org/local-news/2026-03-27/house-democrats-revive-tax-the-rich-despite-leadership-misgivings" target="_blank" rel="noopener">Vermont Public</a>]</b>.'],['Criminal justice','This is her signature issue. She helped pass a law in 2024 that sets rules for when someone who commits a minor crime can be sent to a program to make things right instead of going to court — based on her own background running this kind of program <b class="cite">[<a href="https://vtdigger.org/2025/04/09/a-new-vermont-law-is-expanding-access-to-restorative-justice-statewide-but-its-left-chittenden-countys-community-justice-centers-in-limbo/" target="_blank" rel="noopener">VTDigger</a>]</b>.'],['Education / school funding','Serves on the House Education Committee. She presented a big 2026 bill to the House that reshapes how Vermont pays for and organizes its schools, giving schools until 2028 to decide whether to join together <b class="cite">[<a href="https://www.essexreporter.com/opinion/message-from-montpelier-join-a-community-legislative-conversation/article_4c7efa79-31e4-4be6-b4cb-69c20689ebbe.html" target="_blank" rel="noopener">Essex Reporter</a>]</b>.'],['Housing','Lists “more housing” among the things she’s worked on, and sponsored a law that makes it easier for a county’s sheriff to deliver eviction paperwork, even across county lines <b class="cite">[<a href="https://www.dolanforvthouse.com/priorities" target="_blank" rel="noopener">her campaign site</a>; <a href="https://legislature.vermont.gov/bill/status/2026/H.21" target="_blank" rel="noopener">Vermont Legislature</a>]</b>.'],['Health care','We couldn’t find a detailed 2026 position on health care costs. Back in 2022, she said she usually lets her House teammate, Rep. Houghton, take the lead on health care questions <b class="cite">[<a href="https://www.essexreporter.com/news/chi-22-democrat-incumbents-houghton-and-dolan-debate-republican-candidate-seth-adam-manley-for-two/article_280f0824-3b7c-11ed-9dcb-77e89798e004.html" target="_blank" rel="noopener">Essex Reporter, 2022</a>]</b>.']],endorse:'A group focused on the environment (Vermont Conservation Voters) says she has a perfect environmental voting record and supports her <b class="cite">[<a href="https://vermontconservationvoters.com/2026-firstround/" target="_blank" rel="noopener">Vermont Conservation Voters</a>]</b>. A group representing state workers (VSEA) also supports her <b class="cite">[<a href="https://www.vsea.org/june-13-2026-vsea-primary-endorsement-announcement/" target="_blank" rel="noopener">VSEA</a>]</b>.'},
+    {name:'Lori Houghton',inc:true,web:'http://www.lorihoughton.com',bio:'Lori Houghton already has this job and leads the House as Majority Leader. She used to work at LexisNexis, spent eight years on the Essex Junction Trustees (like a mini town council), and now runs a flower shop called Maplehurst Florist. She serves on the House Health Care Committee.',pos:[['Health care','Leads efforts to make health care easier to get and more affordable.'],['Families & schools','Focuses on strong schools and childcare so families can take care of their kids.'],['Climate','Says fighting climate change is one of her priorities.'],['Reproductive health','Wants to protect women’s reproductive health and protect young people.']],endorse:'<span class="ns">We couldn’t find any well-known groups publicly supporting her own campaign.</span> (She has publicly said she supports fellow candidate Elaine Haney for Senate.)'},
+    {name:'Matthew Parker Towle',inc:false,web:'https://sites.google.com/view/matthewparkertowle',bio:'Matthew Parker Towle is a newcomer running for this seat for the first time.',pos:[['Note','He’s on the official ballot and took part in the June 24, 2026 candidate forum. We haven’t found many public details about his specific plans yet.']],endorse:'<span class="ns">We couldn’t find any well-known groups or leaders publicly supporting him.</span>'}
+   ],
+   issues:{
+     cols:['Karen Dolan (has this job now)','Lori Houghton (has this job now)','Matthew Parker Towle'],
+     rows:[
+       {issue:'School funding',
+        why:'Karen and Lori are both working on schools being better and more affordable — Karen through a specific 2026 bill, Lori by naming strong schools as a general priority. Matthew hasn’t shared his views publicly yet.',
+        cells:[
+         'Presented a 2026 bill reshaping how Vermont pays for and organizes schools, with a 2028 deadline for schools to decide whether to join together <b class="cite">[<a href="https://www.essexreporter.com/opinion/message-from-montpelier-join-a-community-legislative-conversation/article_4c7efa79-31e4-4be6-b4cb-69c20689ebbe.html" target="_blank" rel="noopener">Essex Reporter</a>]</b>',
+         'Lists strong schools and childcare as one of her top priorities.',
+         '<span class="ns">Hasn’t shared a public position yet.</span>']},
+       {issue:'Health care costs',
+        why:'Lori is the one who focuses most on health care in this pair — she’s on the House’s Health Care Committee. Karen has said this isn’t her main area of focus.',
+        cells:[
+         'Hasn’t shared a detailed position; in 2022 she said she leaves health care mostly to Rep. Houghton <b class="cite">[<a href="https://www.essexreporter.com/news/chi-22-democrat-incumbents-houghton-and-dolan-debate-republican-candidate-seth-adam-manley-for-two/article_280f0824-3b7c-11ed-9dcb-77e89798e004.html" target="_blank" rel="noopener">Essex Reporter, 2022</a>]</b>',
+         'Serves on the House Health Care Committee and works on making care easier to get and more affordable.',
+         '<span class="ns">Hasn’t shared a public position yet.</span>']},
+       {issue:'Housing',
+        why:'Karen has taken concrete legislative action related to housing. Lori and Matthew haven’t given specifics yet.',
+        cells:[
+         'Lists “more housing” among her work; sponsored a law making it easier for sheriffs to deliver eviction paperwork across county lines <b class="cite">[<a href="https://www.dolanforvthouse.com/priorities" target="_blank" rel="noopener">her campaign site</a>; <a href="https://legislature.vermont.gov/bill/status/2026/H.21" target="_blank" rel="noopener">Vermont Legislature</a>]</b>',
+         '<span class="ns">Hasn’t given specific housing plans yet.</span>',
+         '<span class="ns">Hasn’t shared a public position yet.</span>']}
+     ]
+   }},
+
+  {id:'h23',cat:'legislative',office:'State House — Chittenden-23',seats:'2 seats',contested:false,
+   whatIsThis:'The Vermont House of Representatives is the larger of the two parts of the state legislature. Each representative covers a smaller area than a senator does. This district covers the other part of Essex Junction and picks two representatives.',
+   note:'This is the other Essex Junction House district. Whether you vote here or in Chittenden-22 depends on your home address.',
+   cands:[
+    {name:'Leonora Dodge',inc:true,bio:'Leonora Dodge already represents this district in the Vermont House.',pos:[['What’s happening','Running with one other Democrat for two open seats, so both are unopposed within the Democratic primary.']]},
+    {name:'Golrang Garofano',inc:true,web:'https://reygarofano.org',bio:'Golrang Garofano already represents this district in the Vermont House.',pos:[['What’s happening','Running with one other Democrat for two open seats, so both are unopposed within the Democratic primary.']]}
+   ]},
+
+  {id:'probate',cat:'county',office:'Probate Judge — Chittenden County',seats:'1 seat',contested:false,
+   whatIsThis:'A Probate Judge handles what happens to a person’s belongings after they die (whether or not they left a will), decides on guardianships (who takes care of someone who needs help making decisions), and approves adoptions.',
+   note:'Confirmed using the official sample ballot for this district.',
+   cands:[{name:'Gregory J. Glennon',inc:false,bio:'Gregory J. Glennon, of Burlington, is the Democratic candidate for this job.',pos:[['What’s happening','Nobody else signed up to run against him in the Democratic primary.']]}]},
+
+  {id:'aj',cat:'county',office:'Assistant Judge — Chittenden County',seats:'2 seats',contested:false,
+   whatIsThis:'An Assistant Judge (sometimes called a “side judge”) is a role that’s special to Vermont. Two assistant judges sit alongside the main judge on certain court cases, and they also help manage the county’s budget and property, like the courthouse.',
+   note:'The official sample ballot lists exactly two Democrats for two open seats.',
+   cands:[
+    {name:'Connie Cain Ramsey',inc:false,web:'https://www.connieforassistantjudge.com',bio:'Connie Cain Ramsey, of Burlington, is running for one of Chittenden County’s two Assistant Judge seats.',pos:[['What’s happening','Running for one of two seats; unopposed within the Democratic primary.']]},
+    {name:'Anne Nichols Williams',inc:false,bio:'Anne Nichols Williams, of Burlington, is running for one of Chittenden County’s two Assistant Judge seats.',pos:[['What’s happening','Running for one of two seats; unopposed within the Democratic primary.']]}
+   ]},
+
+  {id:'sa',cat:'county',office:'State’s Attorney — Chittenden County',seats:'1 seat',contested:true,
+   whatIsThis:'The State’s Attorney is the county’s top prosecutor. This person decides whether to formally charge someone with a crime and represents “the state” (meaning all of us) in criminal court cases.',
+   forum:{status:'upcoming',when:'Wednesday, July 8, 2026, 6:10 p.m.',what:FORUM_WATCH},
+   cands:[
+    {name:'Sarah George',inc:true,web:'https://www.sarahgeorgeforsa.com',bio:'Sarah George already has this job. She was first appointed in 2017 and then elected in 2018. She’s known across the country as a “progressive prosecutor,” meaning she often focuses on alternatives to jail time when possible.',pos:[['Record','Wants to keep doing what she’s been doing, pointing to better relationships with police, more community support programs, and a special court that targets repeat offenders to reduce case backlogs.'],['Rebuttal','Says her office can’t file charges if police don’t send a report, pushing back on claims that people have stopped calling the police.']],endorse:'<span class="ns">We couldn’t find any well-known groups or leaders publicly supporting her.</span>'},
+    {name:'Bram Kranichfeld',inc:false,web:'https://www.bramforstatesattorney.com',bio:'Bram Kranichfeld is currently the top prosecutor for Franklin County, but he lives in Chittenden County. He used to work as a deputy in this same Chittenden County office and served on the Burlington City Council.',pos:[['Public safety','Says people have lost trust in the system and it’s “time to turn the page.” Believes many residents no longer call the police because they don’t expect help.'],['Motivation','Says a scary experience with his own family in Burlington is part of why he decided to run.']],endorse:'<span class="ns">We couldn’t find any well-known groups or leaders publicly supporting him.</span>'}
+   ]},
+
+  {id:'sher',cat:'county',office:'Sheriff — Chittenden County',seats:'1 seat',contested:true,
+   whatIsThis:'The Sheriff is the elected head of law enforcement for the whole county. Sheriff’s deputies patrol certain areas, transport people in custody, and can help serve legal paperwork.',
+   forum:{status:'upcoming',when:'Monday, July 27, 2026, 6:10 p.m.',what:FORUM_WATCH},
+   cands:[
+    {name:'Daniel Gamelin',inc:true,web:'https://www.dangamelin.com',bio:'Daniel Gamelin already has this job, since 2022. He’s worked at the Sheriff’s Office since 1982 — that’s over 40 years! He also worked part-time as a police officer in Winooski and Essex.',pos:[['Profile','Running on his long career in local law enforcement.']],endorse:'<span class="ns">We couldn’t find any well-known groups or leaders publicly supporting him.</span>'},
+    {name:'Kevin Bloom',inc:false,web:'http://www.bloom4sheriff.com',bio:'Kevin Bloom is a musician and community activist from Burlington. This would be his first time in elected office.',pos:[['Housing','Has campaigned on bringing down the number of evictions in the county.']],endorse:'<span class="ns">We couldn’t find any well-known groups or leaders publicly supporting him.</span>'}
+   ]},
+
+  {id:'hb',cat:'county',office:'High Bailiff — Chittenden County',seats:'1 seat',contested:true,
+   whatIsThis:'The High Bailiff is a backup role for the Sheriff. If the Sheriff’s Office can’t deliver certain legal papers (for example, if a case involves the sheriff), the High Bailiff does it instead. In rare situations, the High Bailiff could even arrest the sheriff or temporarily take over sheriff duties.',
+   note:'This race used to be uncertain, but the official ballot confirms five Democrats are running for this one seat.',
+   forum:{status:'upcoming',when:'Wednesday, July 22, 2026, 5:25 p.m.',what:FORUM_WATCH},
+   cands:[
+    {name:'Paul McManus',inc:false,web:'https://www.mcmanus4bailiff.com',bio:'Paul McManus, of Williston, worked at the Chittenden County Sheriff’s Office for 32 years.',pos:[['Platform','Says his three decades of experience mean he could step in and do the sheriff’s job “from day one” if it were ever needed.']],endorse:'<span class="ns">We couldn’t find any well-known groups or leaders publicly supporting him.</span>'},
+    {name:'Augustus Barkyoumb',inc:false,bio:'Augustus Barkyoumb, of Burlington, filed to run for High Bailiff.',pos:[['Note','We haven’t found many public details about his specific plans yet.']],endorse:'<span class="ns">We couldn’t find any well-known groups or leaders publicly supporting him.</span>'},
+    {name:'Amy Payne',inc:false,web:'https://www.payne4highbailiff.com',bio:'Amy Payne, of Burlington, is running for High Bailiff.',pos:[['Note','We haven’t found many public details about her specific plans yet.']],endorse:'<span class="ns">We couldn’t find any well-known groups or leaders publicly supporting her.</span>'},
+    {name:'Helaine "Lainey" Rappaport',inc:false,bio:'Helaine “Lainey” Rappaport, of Burlington, is running for High Bailiff.',pos:[['Note','We haven’t found many public details about her specific plans yet.']],endorse:'<span class="ns">We couldn’t find any well-known groups or leaders publicly supporting her.</span>'},
+    {name:'Michael "Mikey" Roberts',inc:false,bio:'Michael “Mikey” Roberts, of Charlotte, is running for High Bailiff.',pos:[['Note','We haven’t found many public details about his specific plans yet.']],endorse:'<span class="ns">We couldn’t find any well-known groups or leaders publicly supporting him.</span>'}
+   ]}
+];
+
+const list = document.getElementById('list');
+const catLabel = {federal:'Federal',statewide:'Statewide',legislative:'State Lawmaker',county:'County'};
+
+function tagFor(r){
+  return r.contested
+    ? '<span class="tag t-contested">More than one candidate is running</span>'
+    : '<span class="tag t-unopposed">Nobody else is running against them</span>';
+}
+
+function jobBox(text){
+  if(!text) return '';
+  return `<div class="jobbox"><b>What does this job do?</b> ${text}</div>`;
+}
+
+function forumBox(f){
+  if(!f) return '';
+  const cls = f.status==='past' ? 'forumbox past' : 'forumbox';
+  const label = f.status==='past' ? 'This already happened' : 'Upcoming: hear from the candidates';
+  return `<div class="${cls}"><b>${label}:</b> ${f.when}<br>${f.what}</div>`;
+}
+
+function issuesTable(iss){
+  const head = '<th></th>' + iss.cols.map(c=>`<th class="cand-h">${c}</th>`).join('');
+  const body = iss.rows.map(row=>{
+    const cells = row.cells.map(cell=>`<td>${cell}</td>`).join('');
+    return `<tr><td class="issue">${row.issue}<span class="why">${row.why}</span></td>${cells}</tr>`;
+  }).join('');
+  return `<div class="cmptitle">Where they stand — and why people might disagree</div>
+    <div class="srcnote">Plain text = the candidate’s own words · colored bracket links = a news story about them (click to read it yourself) · italics = we couldn’t find out what they think about this.</div>
+    <div class="cmpscroll"><table class="cmp"><thead><tr>${head}</tr></thead><tbody>${body}</tbody></table></div>`;
+}
+
+function render(){
+  list.innerHTML='';
+  RACES.forEach(r=>{
+    const el=document.createElement('div');
+    el.className = 'race';
+    const cands = r.cands.map(c=>{
+      const inc = c.inc ? '<span class="tag t-inc">Already has this job</span>':'';
+      const web = c.web ? `<div class="cweb"><a href="${c.web}" target="_blank" rel="noopener">Campaign website ↗</a></div>`:'';
+      const pos = c.pos.map(p=>`<div class="prow"><span class="k">${p[0]}</span><span class="v">${p[1]}</span></div>`).join('');
+      const endorse = c.endorse ? `<div class="endorse"><span class="k">Who says they support this candidate</span>${c.endorse}</div>` : '';
+      return `<div class="cand"><div class="cname">${c.name}${inc}</div><div class="cbio">${c.bio}</div>${web}${pos}${endorse}</div>`;
+    }).join('');
+    const job = jobBox(r.whatIsThis);
+    const note = r.note ? `<div class="note">${r.note}</div>`:'';
+    const forum = forumBox(r.forum);
+    const issues = r.issues ? issuesTable(r.issues) : '';
+    el.innerHTML=`
+      <div class="rhead">
+        <div style="min-width:0;">
+          <div class="rmeta">${catLabel[r.cat]} · ${r.seats}</div>
+          <div class="rtitle">${r.office}</div>
+        </div>
+        <div style="display:flex;align-items:center;gap:10px;flex-shrink:0;">${tagFor(r)}</div>
+      </div>
+      <div class="rbody">${job}${note}${forum}${cands}${issues}</div>`;
+    list.appendChild(el);
+  });
+}
+
+render();
+</script>
+</body>
+</html>
