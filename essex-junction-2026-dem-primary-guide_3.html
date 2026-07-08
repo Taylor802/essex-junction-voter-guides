@@ -303,7 +303,7 @@ const RACES = [
 
 const list = document.getElementById('list');
 let filter = 'all';
-let expandAllState = false;
+let expandAllState = null;
 const catLabel = {federal:'Federal',statewide:'Statewide',legislative:'Legislative',county:'County'};
 
 function tagFor(r){
@@ -338,7 +338,8 @@ function render(){
   if(!shown.length){list.innerHTML='<div style="color:var(--t3);padding:1rem;font-size:14px;">No races in this filter.</div>';return;}
   shown.forEach(r=>{
     const el=document.createElement('div');
-    el.className = expandAllState ? 'race open' : 'race';
+    const isOpen = expandAllState===null ? r.contested : expandAllState;
+    el.className = isOpen ? 'race open' : 'race';
     const cands = r.cands.map(c=>{
       const inc = c.inc ? '<span class="tag t-inc">Incumbent</span>':'';
       const web = c.web ? `<div class="cweb"><a href="${c.web}" target="_blank" rel="noopener">Campaign website \u2197</a></div>`:'';
